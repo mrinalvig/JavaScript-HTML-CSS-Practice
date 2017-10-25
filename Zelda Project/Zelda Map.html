@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style type="text/css">
+		#container{
+			width: 500px;
+			height: 500px;
+			position: relative;
+			outline: 1px solid black;
+		}
+		
+		.tile{
+			height: 50px;
+			width: 50px;
+			position: relative;
+			float: left;
+			background-image: url(tiles.gif);
+		}
+		
+		.grass{
+			/*rows, columns*/
+			background-position: -150px -0px;
+		}
+		.bush{
+			/*rows, columns*/
+			background-position: -150px -50px;
+			
+		}
+		
+		.dirt{
+			/*rows, columns*/
+			background-position: -50px -50px;
+		}
+		
+		</style>
+	</head>
+	<body>
+	<div id="container"></div>
+		<script>
+		var mapArray=[
+		[2,2,2,0,0,0,0,0,0,0],
+		[2,2,0,0,0,0,0,0,1,0],
+		[2,1,0,0,0,0,0,0,0,0],
+		[0,0,0,0,0,0,0,0,0,0],
+		[0,0,0,0,0,0,0,0,0,0],
+		[0,0,0,0,0,0,1,0,0,0],
+		[0,0,0,0,0,0,0,0,0,0],
+		[0,0,1,0,0,0,0,0,0,0],
+		[0,0,0,0,0,0,0,0,0,0], 
+		[0,0,0,0,0,0,0,1,0,0]
+		];
+		function drawMap()
+		{
+			for(var i=0; i < mapArray.length; i++)
+			{
+				for (var j=0; j < mapArray[i].length; j++)
+				{
+					if(parseInt(mapArray[i][j]) == 0)
+					{
+						document.getElementById('container').innerHTML += '<div class="grass tile"></div>';
+					}
+					if(parseInt(mapArray[i][j]) == 1)
+					{
+						document.getElementById('container').innerHTML += '<div class="bush tile"></div>';
+					}
+					if(parseInt(mapArray[i][j]) == 2)
+					{
+						document.getElementById('container').innerHTML += '<div class="dirt tile"></div>';
+					}
+				}
+			}
+		}
+		window.onload=function(){
+			drawMap();
+		}
+		</script>
+	</body>
+</html>
