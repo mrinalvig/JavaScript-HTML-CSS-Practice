@@ -1,0 +1,1256 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style type="text/css">
+		#container{
+			width: 1500px;
+			height: 1500px;
+			position: relative;
+			//outline: 1px solid black;
+		}
+		
+		.dungeon{
+			height: 50px;
+			width: 50px;
+			position: relative;
+			float: left;
+			background-image: url(dungeon.png);
+		}
+		
+		.entry{
+			height: 50px;
+			width: 50px;
+			position: relative;
+			float: left;
+			background-image: url(door.png);
+		}
+		
+		.entry2{
+			height: 50px;
+			width: 50px;
+			position: relative;
+			float: left;
+			background-image: url(door2.png);
+		}
+		
+		.walls{
+			height: 50px;
+			width: 50px;
+			position: relative;
+			float: left;
+			background-image: url(walls.png);
+		}
+		
+		.floor{
+			height: 50px;
+			width: 50px;
+			position: relative;
+			float: left;
+			background-image: url(floor.png);
+		}
+		
+		.doorOne{
+			background-position: -0px -0px;
+		}
+		
+		.doorTwo{
+			background-position: -0px -50px;
+		}
+		
+		.doorThree{
+			background-position: -50px -0px;
+		}
+		
+		.doorFour{
+			background-position: -50px -50px;
+		}
+		
+		.doorFive{
+			background-position: -0px -100px;
+		}
+		
+		.doorSix{
+			background-position: -50px -100px;
+		}
+		
+		.doorSeven{
+			background-position: -0px -150px;
+		}
+		
+		.doorEight{
+			background-position: -50px -150px;
+		}
+		
+		.doorNine{
+			background-position: -0px -0px;
+		}
+		
+		.doorTen{
+			background-position: -50px -0px;
+		}
+		
+		.doorEleven{
+			background-position: -0px -50px;
+		}
+		
+		.doorTwelve{
+			background-position: -50px -50px;
+		}
+		
+		.wallOne{
+			background-position: -0px -50px;
+		}
+		
+		.wallTwo{
+			background-position: -0px -100px;
+		}
+		
+		.wallThree{
+			background-position: -0px -0px;
+		}
+		
+		.wallFour{
+			background-position: -0px -150px;
+		}
+		
+		.wallFive{
+			background-position: -50px -0px;
+		}
+		
+		.wallSix{
+			background-position: -100px -0px;
+		}
+		
+		.wallSeven{
+			background-position: -150px -0px;
+		}
+		
+		.wallEight{
+			background-position: -150px -50px;
+		}
+		
+		.wallNine{
+			background-position: -150px -100px;
+		}
+		
+		.wallTen{
+			background-position: -150px -150px;
+		}
+		
+		.wallEleven{
+			background-position: -50px -150px;
+		}
+		
+		.wallTwelve{
+			background-position: -100px -150px;
+		}
+		
+		.wallThirteen{
+			background-position: -50px -50px;
+		}
+		
+		.wall2{
+			height: 50px;
+			width: 50px;
+			position: relative;
+			float: left;
+			background-image: url(wall2.png);
+		}
+		
+		.wall4{
+			height: 50px;
+			width: 50px;
+			position: relative;
+			float: left;
+			background-image: url(wall4.png);
+		}
+		
+		.wall{
+			height: 50px;
+			width: 50px;
+			position: relative;
+			float: left;
+			background-image: url(wall.png);
+		}
+		
+		.wallFourteen{
+			background-position: -0px -0px;
+		}
+		
+		.wallFifteen{
+			background-position: -50px -0px;
+		}
+		
+		.wallSixteen{
+			background-position: -100px -50px;
+		}
+		
+		
+		.wallSeventeen{
+			background-position: -50px -100px;
+		}
+		
+		
+		.wallEighteen{
+			background-position: -100px -100px;
+		}
+		
+		.wallNineteen{
+			background-position: -0px -0px;
+		}
+		
+		.wallTwenty{
+			background-position: -0px -50px;
+		}
+		
+		.wallTwentyOne{
+			background-position: -0px -0px;
+		}
+		
+		.wallTwentyTwo{
+			background-position: -0px -50px;
+		}
+		
+		.wallTwentyThree{
+			background-position: -50px -00px;
+		}
+		
+		.wallTwentyFour{
+			background-position: -50px -50px;
+		}
+		
+		.barrier{
+			height: 50px;
+			width: 50px;
+			position: relative;
+			float: left;
+			background-image: url(barrier.png);
+			background-position: -0px -0px;
+		}
+		
+		.chest{
+			height: 50px;
+			width: 50px;
+			position: relative;
+			float: left;
+			background-image: url(chest.png);
+		}
+		
+		.chestOne{
+			background-position: -0px -0px;
+		}
+		
+		.chestTwo{
+			background-position: -50px -0px;
+		}
+		
+		.chestThree{
+			background-position: -0px -50px;
+		}
+		
+		.chestFour{
+			background-position: -50px -50px;
+		}
+		
+		.target{
+			height: 50px;
+			width: 50px;
+			position: relative;
+			float: left;
+			background-image: url(target.png);
+		}
+		
+		.targetOne{
+			background-position: -0px -0px;
+		}
+		
+		.targetTwo{
+			background-position: -0px -50px;
+		}
+		
+		.removable{
+			height: 50px;
+			width: 50px;
+			position: relative;
+			float: left;
+			background-image: url(removable.png);
+		}
+		
+		.boss{
+			height: 50px;
+			width: 50px;
+			position: relative;
+			float: left;
+			background-image: url(boss.png);
+		}
+		
+		.bossOne{
+			background-position: -0px -0px;
+		}
+		
+		.bossTwo{
+			background-position: -50px -0px;
+		}
+		
+		.bossThree{
+			background-position: -0px -50px;
+		}
+		
+		.bossFour{
+			background-position: -50px -50px;
+		}
+		
+		.spikes{
+			height: 50px;
+			width: 50px;
+			position: relative;
+			float: left;
+			background-image: url(spikes.jpg);
+			background-position: -400px -5500px;
+		}
+		
+		.border{
+			height: 50px;
+			width: 50px;
+			position: relative;
+			float: left;
+			background-image: url(spikes.jpg);
+			background-position: -300px -600px;
+		}
+		
+		.chest2{
+			height: 50px;
+			width: 50px;
+			position: relative;
+			float: left;
+			background-image: url(chest2.png);
+		}
+		
+		.chestFive{
+			background-position: -0px -0px;
+		}
+		
+		.chestSix{
+			background-position: -50px -0px;
+		}
+		
+		.chestSeven{
+			background-position: -0px -50px;
+		}
+		
+		.chestEight{
+			background-position: -50px -50px;
+		}
+		
+		.outline{
+			height: 50px;
+			width: 50px;
+			position: relative;
+			float: left;
+			background-image: url(outline.png);
+			background-position: -0px -0px;
+		}
+		
+		</style>
+	</head>
+	<body>
+	<div id="container"></div>
+		<script>
+		function drawMap()
+		{
+			var mapArray=[
+			[11,13,14,13,14,13,14,13,14,13,14,13,14,13,14,13,14,13,14,13,14,13,14,13,14,13,14,13,14,15],
+			[09,21,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,24,16],
+			[10,22,00,34,00,00,00,00,34,00,29,00,34,00,00,00,00,34,00,29,00,00,00,00,00,00,00,00,23,17],
+			[09,22,00,35,00,00,00,00,35,00,29,00,35,00,00,00,00,35,00,29,00,00,00,00,00,00,00,34,23,16],
+			[10,22,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,35,23,17],
+			[09,22,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,00,36,00,00,00,00,00,00,00,00,23,16],
+			[10,22,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,00,36,00,00,00,00,00,00,00,00,23,17],
+			[09,22,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,34,23,16],
+			[10,22,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,35,23,17],
+			[09,22,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,00,23,16],
+			[10,22,29,29,29,00,00,29,29,29,29,29,29,29,36,36,29,29,29,29,29,29,29,36,36,29,29,29,23,17],
+			[09,22,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,00,23,16],
+			[10,22,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,34,29,00,00,00,00,00,00,00,00,23,17],
+			[09,22,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,35,29,00,00,00,00,00,00,00,00,23,16],
+			[01,03,00,00,00,00,00,00,00,00,36,00,00,00,00,00,00,00,00,29,00,00,00,00,00,30,31,00,23,17],
+			[02,04,00,00,00,00,00,00,00,00,36,00,00,00,00,00,00,00,00,29,00,00,00,00,00,32,33,00,23,16],
+			[09,22,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,34,29,00,00,00,00,00,00,00,00,23,17],
+			[10,22,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,35,29,00,00,00,00,00,00,00,00,23,16],
+			[09,22,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,00,23,17],
+			[10,22,29,29,29,36,36,29,29,29,29,29,29,29,36,36,29,29,29,29,29,29,29,29,29,29,29,29,23,16],
+			[09,22,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,00,23,17],
+			[10,22,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,34,23,16],
+			[09,22,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,35,23,17],
+			[10,22,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,00,36,00,00,00,00,00,00,00,00,23,16],
+			[09,22,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,00,36,00,00,00,00,00,00,00,00,23,17],
+			[10,22,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,34,23,16],
+			[09,22,00,34,00,00,00,00,34,00,29,00,34,00,00,00,00,34,00,29,00,00,00,00,00,00,00,35,23,17],
+			[10,22,00,35,00,00,00,00,35,00,29,00,35,00,00,00,00,35,00,29,00,00,00,00,00,00,00,00,23,16],
+			[09,25,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,26,17],
+			[12,19,20,19,20,19,20,19,20,19,20,19,20,19,20,19,20,19,20,19,20,19,20,19,20,19,20,19,20,18]
+			
+			];
+			/*
+			Room Order
+			
+			1,2,3
+			4,5,6
+			7,8,9
+			
+			Order to follow for unlocking rooms
+			
+			1, 5, 2, 3, 8, 9, 7, 6
+			
+			*/
+			
+				for(var i=0; i < mapArray.length; i++)
+				{
+					for (var j=0; j < mapArray[i].length; j++)
+					{
+						if(parseInt(mapArray[i][j]) == 00)
+						{
+							document.getElementById('container').innerHTML += '<div class="floor"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 01)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorOne entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 02)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorTwo entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 03)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorThree entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 04)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorFour entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 05)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorFive entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 06)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorSix entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 07)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorSeven entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 08)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorEight entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 09)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallOne walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 10)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallTwo walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 11)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallThree walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 12)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallFour walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 13)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallFive walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 14)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallSix walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 15)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallSeven walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 16)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallEight walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 17)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallNine walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 18)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallTen walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 19)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallEleven walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 20)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallTwelve walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 21)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallThirteen walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 22)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallFourteen wall2"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 23)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallFifteen wall2"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 24)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallSixteen walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 25)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallSeventeen walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 26)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallEighteen walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 27)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallNineteen wall4"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 28)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallTwenty wall4"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 29)
+						{
+							document.getElementById('container').innerHTML += '<div class="barrier"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 30)
+						{
+							document.getElementById('container').innerHTML += '<div class="chestOne chest"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 31)
+						{
+							document.getElementById('container').innerHTML += '<div class="chestTwo chest"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 32)
+						{
+							document.getElementById('container').innerHTML += '<div class="chestThree chest"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 33)
+						{
+							document.getElementById('container').innerHTML += '<div class="chestFour chest"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 34)
+						{
+							document.getElementById('container').innerHTML += '<div class="targetOne target"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 35)
+						{
+							document.getElementById('container').innerHTML += '<div class="targetTwo target"></div>';
+						}
+						
+						if(parseInt(mapArray[i][j]) == 36)
+						{
+							document.getElementById('container').innerHTML += '<div class="removable"></div>';
+						}
+					}
+				}
+		}
+		
+		function mainMap()
+		{
+			var mapArray=[
+			[43,43,43,43,43,43,43,43,43,43,11,13,14,13,37,38,14,13,14,15,43,43,43,43,43,43,43,43,43,43],
+			[43,43,43,43,43,43,43,43,43,43,10,48,27,27,39,40,27,27,50,16,43,43,43,43,43,43,43,43,43,43],
+			[43,43,43,43,43,43,43,43,43,43,09,22,00,00,00,00,00,00,23,17,43,43,43,43,43,43,43,43,43,43],
+			[43,43,43,43,43,43,43,43,43,43,10,22,00,00,00,00,00,00,23,16,43,43,43,43,43,43,43,43,43,43],
+			[43,43,43,43,11,13,14,13,14,13,18,22,00,00,00,00,00,00,23,12,13,14,13,14,13,15,43,43,43,43],
+			[43,43,43,43,09,48,27,27,27,27,27,00,00,00,00,00,00,00,00,27,27,27,27,27,50,16,43,43,43,43],
+			[43,43,43,43,10,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,17,43,43,43,43],
+			[43,43,43,43,09,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,16,43,43,43,43],
+			[43,43,43,43,10,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,17,43,43,43,43],
+			[43,43,43,43,09,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,16,43,43,43,43],
+			[43,43,43,43,10,22,00,00,00,29,29,29,29,29,29,29,29,29,29,29,29,00,00,00,23,17,43,43,43,43],
+			[11,13,14,13,18,22,00,00,00,41,41,41,41,41,41,41,41,41,41,41,41,00,00,00,23,12,13,14,13,15],
+			[10,48,27,27,27,00,00,00,00,41,41,41,41,41,41,41,41,41,41,41,41,00,00,00,00,27,27,27,50,17],
+			[09,22,00,00,00,00,00,00,00,41,41,41,41,41,41,41,41,41,41,41,41,00,00,00,00,00,00,00,23,16],
+			[01,03,00,00,00,00,00,00,00,41,41,41,41,41,41,41,41,41,41,41,41,00,00,00,00,00,00,00,05,06],
+			[02,04,00,00,00,00,00,00,00,41,41,41,41,41,41,41,41,41,41,41,41,00,00,00,00,00,00,00,07,08],
+			[09,22,00,00,00,00,00,00,00,41,41,41,41,41,41,41,41,41,41,41,41,00,00,00,00,00,00,00,23,17],
+			[10,49,28,28,28,00,00,00,00,41,41,41,41,41,41,41,41,41,41,41,41,00,00,00,00,28,28,28,51,16],
+			[12,19,20,19,15,22,00,00,00,41,41,41,41,41,41,41,41,41,41,41,41,00,00,00,23,11,19,20,19,18],
+			[43,43,43,43,09,22,00,00,00,29,29,29,29,29,29,29,29,29,29,29,29,00,00,00,23,16,43,43,43,43],
+			[43,43,43,43,10,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,17,43,43,43,43],
+			[43,43,43,43,09,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,16,43,43,43,43],
+			[43,43,43,43,10,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,17,43,43,43,43],
+			[43,43,43,43,09,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,16,43,43,43,43],
+			[43,43,43,43,10,49,28,28,28,28,28,00,00,00,00,00,00,00,00,28,28,28,28,28,51,17,43,43,43,43],
+			[43,43,43,43,12,20,19,20,19,20,15,22,00,00,00,00,00,00,23,11,19,20,19,20,19,11,43,43,43,43],
+			[43,43,43,43,43,43,43,43,43,43,09,22,00,00,00,00,00,00,23,16,43,43,43,43,43,43,43,43,43,43],
+			[43,43,43,43,43,43,43,43,43,43,10,22,00,00,00,00,00,00,23,17,43,43,43,43,43,43,43,43,43,43],
+			[43,43,43,43,43,43,43,43,43,43,09,49,28,28,44,45,28,28,51,16,43,43,43,43,43,43,43,43,43,43],
+			[43,43,43,43,43,43,43,43,43,43,12,19,20,19,46,47,20,19,20,18,43,43,43,43,43,43,43,43,43,43]
+			
+			];
+			
+				for(var i=0; i < mapArray.length; i++)
+				{
+					for (var j=0; j < mapArray[i].length; j++)
+					{
+						if(parseInt(mapArray[i][j]) == 00)
+						{
+							document.getElementById('container').innerHTML += '<div class="floor"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 01)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorOne entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 02)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorTwo entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 03)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorThree entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 04)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorFour entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 05)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorFive entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 06)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorSix entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 07)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorSeven entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 08)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorEight entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 09)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallOne walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 10)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallTwo walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 11)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallThree walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 12)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallFour walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 13)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallFive walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 14)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallSix walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 15)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallSeven walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 16)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallEight walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 17)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallNine walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 18)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallTen walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 19)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallEleven walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 20)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallTwelve walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 21)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallThirteen walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 22)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallFourteen wall2"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 23)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallFifteen wall2"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 24)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallSixteen wall"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 25)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallSeventeen wall"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 26)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallEighteen wall"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 27)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallNineteen wall4"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 28)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallTwenty wall4"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 29)
+						{
+							document.getElementById('container').innerHTML += '<div class="barrier"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 30)
+						{
+							document.getElementById('container').innerHTML += '<div class="chestOne chest"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 31)
+						{
+							document.getElementById('container').innerHTML += '<div class="chestTwo chest"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 32)
+						{
+							document.getElementById('container').innerHTML += '<div class="chestThree chest"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 33)
+						{
+							document.getElementById('container').innerHTML += '<div class="chestFour chest"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 34)
+						{
+							document.getElementById('container').innerHTML += '<div class="targetOne target"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 35)
+						{
+							document.getElementById('container').innerHTML += '<div class="targetTwo target"></div>';
+						}
+						
+						if(parseInt(mapArray[i][j]) == 36)
+						{
+							document.getElementById('container').innerHTML += '<div class="removable"></div>';
+						}
+						
+						if(parseInt(mapArray[i][j]) == 37)
+						{
+							document.getElementById('container').innerHTML += '<div class="bossOne boss"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 38)
+						{
+							document.getElementById('container').innerHTML += '<div class="bossTwo boss"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 39)
+						{
+							document.getElementById('container').innerHTML += '<div class="bossThree boss"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 40)
+						{
+							document.getElementById('container').innerHTML += '<div class="bossFour boss"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 41)
+						{
+							document.getElementById('container').innerHTML += '<div class="spikes"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 42)
+						{
+							document.getElementById('container').innerHTML += '<div class="border"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 43)
+						{
+							document.getElementById('container').innerHTML += '<div class="outline"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 44)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorNine entry2"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 45)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorTen entry2"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 46)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorEleven entry2"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 47)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorTwelve entry2"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 48)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallTwentyOne wall"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 49)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallTwentyTwo wall"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 50)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallTwentyThree wall"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 51)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallTwentyFour wall"></div>';
+						}
+					}
+				}
+		}
+		
+		function arrowMap()
+		{
+			var mapArray=[
+			[41,41,41,41,41,41,41,41,41,41,41,29,29,29,29,29,29,29,29,41,41,41,41,41,41,41,41,41,41,41],
+			[41,41,41,41,41,41,41,41,41,41,41,29,00,00,00,00,00,00,29,41,41,41,41,41,41,41,41,41,41,41],
+			[41,41,41,41,41,41,41,41,41,41,41,29,00,00,37,38,00,00,29,41,41,41,41,41,41,41,41,41,41,41],
+			[41,41,41,41,41,41,41,41,41,41,41,29,00,00,39,40,00,00,29,41,41,41,41,41,41,41,41,41,41,41],
+			[41,41,41,41,11,13,14,13,14,13,14,29,00,00,00,00,00,00,29,13,14,13,14,13,14,15,41,41,41,41],
+			[41,41,41,41,09,21,27,27,27,27,27,29,29,29,36,36,29,29,29,27,27,27,27,27,24,16,41,41,41,41],
+			[41,41,41,41,10,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,17,41,41,41,41],
+			[41,41,41,41,09,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,16,41,41,41,41],
+			[41,41,41,41,10,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,17,41,41,41,41],
+			[41,41,41,41,09,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,16,41,41,41,41],
+			[41,41,41,41,10,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,12,14,13,14,15],
+			[41,41,41,41,09,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,27,27,27,24,16],
+			[41,41,41,41,10,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,17],
+			[41,41,41,41,09,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,05,06],
+			[41,41,41,41,10,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,07,08],
+			[41,41,41,41,09,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,16],
+			[41,41,41,41,10,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,28,28,28,26,17],
+			[41,41,41,41,09,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,11,20,19,20,18],
+			[41,41,41,41,10,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,17,41,41,41,41],
+			[41,41,41,41,09,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,16,41,41,41,41],
+			[41,41,41,41,10,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,17,41,41,41,41],
+			[41,41,41,41,09,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,16,41,41,41,41],
+			[41,41,41,41,10,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,17,41,41,41,41],
+			[41,41,41,41,09,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,16,41,41,41,41],
+			[41,41,41,41,10,25,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,26,17,41,41,41,41],
+			[41,41,41,41,12,19,20,19,20,19,20,19,20,19,20,19,20,19,20,19,20,19,20,19,20,18,41,41,41,41],
+			[41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41],
+			[41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41],
+			[41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41],
+			[41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41]
+			
+			];
+		
+			
+				for(var i=0; i < mapArray.length; i++)
+				{
+					for (var j=0; j < mapArray[i].length; j++)
+					{
+						if(parseInt(mapArray[i][j]) == 00)
+						{
+							document.getElementById('container').innerHTML += '<div class="floor"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 01)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorOne entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 02)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorTwo entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 03)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorThree entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 04)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorFour entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 05)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorFive entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 06)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorSix entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 07)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorSeven entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 08)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorEight entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 09)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallOne walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 10)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallTwo walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 11)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallThree walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 12)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallFour walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 13)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallFive walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 14)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallSix walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 15)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallSeven walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 16)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallEight walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 17)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallNine walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 18)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallTen walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 19)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallEleven walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 20)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallTwelve walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 21)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallThirteen walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 22)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallFourteen wall2"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 23)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallFifteen wall2"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 24)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallSixteen walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 25)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallSeventeen walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 26)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallEighteen walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 27)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallNineteen wall4"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 28)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallTwenty wall4"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 29)
+						{
+							document.getElementById('container').innerHTML += '<div class="barrier"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 30)
+						{
+							document.getElementById('container').innerHTML += '<div class="chestOne chest"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 31)
+						{
+							document.getElementById('container').innerHTML += '<div class="chestTwo chest"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 32)
+						{
+							document.getElementById('container').innerHTML += '<div class="chestThree chest"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 33)
+						{
+							document.getElementById('container').innerHTML += '<div class="chestFour chest"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 34)
+						{
+							document.getElementById('container').innerHTML += '<div class="targetOne target"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 35)
+						{
+							document.getElementById('container').innerHTML += '<div class="targetTwo target"></div>';
+						}
+						
+						if(parseInt(mapArray[i][j]) == 36)
+						{
+							document.getElementById('container').innerHTML += '<div class="removable"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 37)
+						{
+							document.getElementById('container').innerHTML += '<div class="chestFive chest2"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 38)
+						{
+							document.getElementById('container').innerHTML += '<div class="chestSix chest2"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 39)
+						{
+							document.getElementById('container').innerHTML += '<div class="chestSeven chest2"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 40)
+						{
+							document.getElementById('container').innerHTML += '<div class="chestEight chest2"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 41)
+						{
+							document.getElementById('container').innerHTML += '<div class="outline"></div>';
+						}
+					}
+				}
+		}
+		
+		function bossMap()
+		{
+			var mapArray=[
+			[41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41],
+			[41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41],
+			[41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41],
+			[41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41],
+			[41,41,41,41,11,13,14,13,14,13,14,13,14,13,14,13,14,13,14,13,14,13,14,13,14,15,41,41,41,41],
+			[41,41,41,41,09,21,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,24,16,41,41,41,41],
+			[41,41,41,41,10,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,17,41,41,41,41],
+			[41,41,41,41,09,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,16,41,41,41,41],
+			[41,41,41,41,10,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,17,41,41,41,41],
+			[41,41,41,41,09,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,16,41,41,41,41],
+			[41,41,41,41,10,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,17,41,41,41,41],
+			[41,41,41,41,09,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,16,41,41,41,41],
+			[41,41,41,41,10,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,17,41,41,41,41],
+			[41,41,41,41,09,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,16,41,41,41,41],
+			[41,41,41,41,10,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,17,41,41,41,41],
+			[41,41,41,41,09,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,16,41,41,41,41],
+			[41,41,41,41,10,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,17,41,41,41,41],
+			[41,41,41,41,09,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,16,41,41,41,41],
+			[41,41,41,41,10,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,17,41,41,41,41],
+			[41,41,41,41,09,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,16,41,41,41,41],
+			[41,41,41,41,10,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,17,41,41,41,41],
+			[41,41,41,41,09,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,16,41,41,41,41],
+			[41,41,41,41,10,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,17,41,41,41,41],
+			[41,41,41,41,09,22,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,16,41,41,41,41],
+			[41,41,41,41,10,25,28,28,28,28,28,28,00,00,00,00,00,00,28,28,28,28,28,28,26,17,41,41,41,41],
+			[41,41,41,41,12,19,20,19,20,19,20,15,22,00,00,00,00,23,11,19,20,19,20,19,20,18,41,41,41,41],
+			[41,41,41,41,41,41,41,41,41,41,41,10,22,00,00,00,00,23,17,41,41,41,41,41,41,41,41,41,41,41],
+			[41,41,41,41,41,41,41,41,41,41,41,09,22,00,00,00,00,23,16,41,41,41,41,41,41,41,41,41,41,41],
+			[41,41,41,41,41,41,41,41,41,41,41,10,25,28,37,38,28,26,17,41,41,41,41,41,41,41,41,41,41,41],
+			[41,41,41,41,41,41,41,41,41,41,41,12,20,19,39,40,20,19,18,41,41,41,41,41,41,41,41,41,41,41]
+			
+			];
+			
+			
+				for(var i=0; i < mapArray.length; i++)
+				{
+					for (var j=0; j < mapArray[i].length; j++)
+					{
+						if(parseInt(mapArray[i][j]) == 00)
+						{
+							document.getElementById('container').innerHTML += '<div class="floor"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 01)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorOne entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 02)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorTwo entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 03)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorThree entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 04)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorFour entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 05)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorFive entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 06)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorSix entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 07)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorSeven entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 08)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorEight entry"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 09)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallOne walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 10)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallTwo walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 11)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallThree walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 12)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallFour walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 13)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallFive walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 14)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallSix walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 15)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallSeven walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 16)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallEight walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 17)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallNine walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 18)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallTen walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 19)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallEleven walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 20)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallTwelve walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 21)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallThirteen walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 22)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallFourteen wall2"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 23)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallFifteen wall2"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 24)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallSixteen walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 25)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallSeventeen walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 26)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallEighteen walls"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 27)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallNineteen wall4"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 28)
+						{
+							document.getElementById('container').innerHTML += '<div class="wallTwenty wall4"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 29)
+						{
+							document.getElementById('container').innerHTML += '<div class="barrier"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 30)
+						{
+							document.getElementById('container').innerHTML += '<div class="chestOne chest"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 31)
+						{
+							document.getElementById('container').innerHTML += '<div class="chestTwo chest"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 32)
+						{
+							document.getElementById('container').innerHTML += '<div class="chestThree chest"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 33)
+						{
+							document.getElementById('container').innerHTML += '<div class="chestFour chest"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 34)
+						{
+							document.getElementById('container').innerHTML += '<div class="targetOne target"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 35)
+						{
+							document.getElementById('container').innerHTML += '<div class="targetTwo target"></div>';
+						}
+						
+						if(parseInt(mapArray[i][j]) == 36)
+						{
+							document.getElementById('container').innerHTML += '<div class="removable"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 37)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorNine entry2"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 38)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorTen entry2"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 39)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorEleven entry2"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 40)
+						{
+							document.getElementById('container').innerHTML += '<div class="doorTwelve entry2"></div>';
+						}
+						if(parseInt(mapArray[i][j]) == 41)
+						{
+							document.getElementById('container').innerHTML += '<div class="outline"></div>';
+						}
+					}
+				}
+		}
+		
+		window.onload=function(){
+			//drawMap();
+			mainMap();
+			//arrowMap();
+			//bossMap();
+		}
+		</script>
+	</body>
+</html>
+

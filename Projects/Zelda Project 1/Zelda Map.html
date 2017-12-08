@@ -18,14 +18,6 @@
 			background-image: url(tiles.gif);
 		}
 		
-			.tileset{
-			height: 50px;
-			width: 50px;
-			position: relative;
-			float: left;
-			background-image: url(tileset.gif);
-		}
-		
 		.grass{
 			/*rows, columns*/
 			background-position: -150px -0px;
@@ -186,6 +178,7 @@
 			background-position: -250px -150px;
 		}
 		
+		
 		</style>
 	</head>
 	<body>
@@ -345,186 +338,10 @@
 				}
 		}
 		
-		function drawMap()
-		{
-		
-		
-			var mapArray=[
-			[21,22,21,22,21,22,21,22,21,22,21,22,21,22,21,22,21,22,21,22,21,22,21,22,21,22,21,22,21,22],
-			[23,24,23,24,23,24,23,24,23,24,23,24,23,24,23,24,23,24,23,24,23,24,23,24,23,24,23,24,23,24],
-			[23,24,25,26,25,26,25,26,25,26,25,26,25,26,25,26,25,26,25,26,25,26,25,26,25,26,25,26,23,24],
-			[23,24,00,00,00,00,00,00,00,00,00,00,00,00,03,05,00,00,00,00,00,00,00,00,00,00,00,00,23,24],
-			[23,24,00,11,00,00,00,00,00,00,00,00,00,00,04,06,00,00,00,00,00,01,00,00,00,00,01,00,23,24],
-			[23,24,00,00,00,00,01,00,00,00,00,00,00,00,19,20,00,00,00,00,00,00,00,00,11,11,00,00,23,24],
-			[23,24,00,00,00,00,00,00,00,00,00,00,00,00,19,20,00,00,00,00,00,00,00,00,11,11,00,00,23,24],
-			[23,24,01,00,00,00,00,00,00,00,00,00,00,00,19,20,00,00,00,00,00,00,00,00,00,00,00,01,23,24],
-			[23,24,00,00,00,00,00,00,00,00,00,00,00,00,19,20,00,00,00,00,00,00,00,00,00,00,00,00,23,24], 
-			[23,24,00,00,00,00,00,01,00,00,00,00,00,00,19,20,00,00,00,00,00,00,00,00,00,00,00,00,23,24],
-			[23,24,00,00,00,00,00,00,00,00,00,00,00,00,19,20,00,00,00,00,00,07,08,00,00,00,00,00,23,24],
-			[23,24,00,00,00,00,00,00,00,00,00,00,00,00,19,20,00,00,00,00,00,09,10,00,00,00,00,00,23,24],
-			[23,24,00,01,00,00,00,00,00,01,00,00,00,00,19,20,00,00,01,00,00,00,00,00,00,01,00,00,23,24],
-			[23,24,14,15,12,00,00,00,00,00,00,00,00,00,19,20,00,00,00,00,00,00,00,00,00,00,00,00,23,24],
-			[23,24,11,11,12,00,00,00,00,00,00,00,00,00,19,20,00,00,00,00,00,00,00,00,00,00,00,00,23,24],
-			[23,24,11,11,12,00,01,00,00,00,00,00,00,00,19,20,00,00,00,00,00,00,00,00,00,00,00,00,23,24],
-			[23,24,11,11,12,00,00,00,00,00,00,00,00,00,19,20,00,00,00,00,00,00,00,01,00,00,00,00,23,24],
-			[23,24,11,11,12,00,00,00,00,00,00,00,00,00,19,20,00,00,00,00,00,00,00,00,00,00,00,00,23,24],
-			[23,24,11,11,12,00,00,00,00,00,00,00,00,00,19,20,01,00,00,00,00,00,00,00,00,00,00,00,23,24],
-			[23,24,11,11,12,00,01,00,00,00,00,00,00,00,19,20,00,00,00,00,00,00,00,00,00,00,00,00,23,24],
-			[23,24,11,11,12,00,00,00,00,00,00,00,00,00,19,20,01,00,00,00,00,00,00,00,00,01,00,00,23,24],
-			[23,24,11,11,12,00,00,00,00,00,00,00,00,00,19,20,00,00,00,00,00,00,00,00,00,00,00,00,23,24],
-			[23,24,11,11,12,00,00,00,01,00,00,00,01,00,19,20,00,00,00,00,00,00,00,00,00,00,00,00,23,24],
-			[23,24,11,11,12,00,00,00,00,00,00,00,00,00,19,20,00,00,00,00,00,00,00,00,00,00,00,00,23,24],
-			[23,24,11,11,00,00,00,00,00,00,00,00,00,00,19,20,00,00,00,00,00,00,00,00,00,11,00,00,23,24],
-			[23,24,11,11,00,00,00,00,00,00,00,00,00,00,19,20,00,00,00,00,00,00,00,00,00,00,00,00,23,24],
-			[23,24,14,15,13,16,00,00,00,00,00,00,00,00,19,20,00,00,00,00,01,00,00,00,00,00,00,00,23,24],
-			[23,24,00,00,00,00,00,00,00,00,00,00,00,00,19,20,00,01,00,00,00,00,00,00,27,27,27,27,27,27],
-			[23,24,01,00,00,00,00,00,00,01,00,00,00,00,19,20,00,00,00,00,00,00,00,00,31,31,31,31,31,31],
-			[00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,28,28,28,28,28,28]
-			
-			];
-			
-				for(var i=0; i < mapArray.length; i++)
-				{
-					for (var j=0; j < mapArray[i].length; j++)
-					{
-						if(parseInt(mapArray[i][j]) == 00)
-						{
-							document.getElementById('container').innerHTML += '<div class="grass tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 01)
-						{
-							document.getElementById('container').innerHTML += '<div class="bush tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 02)
-						{
-							document.getElementById('container').innerHTML += '<div class="dirt tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 03)
-						{
-							document.getElementById('container').innerHTML += '<div class="holeOne tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 04)
-						{
-							document.getElementById('container').innerHTML += '<div class="holeTwo tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 05)
-						{
-							document.getElementById('container').innerHTML += '<div class="holeThree tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 06)
-						{
-							document.getElementById('container').innerHTML += '<div class="holeFour tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 07)
-						{
-							document.getElementById('container').innerHTML += '<div class="stumpOne tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 08)
-						{
-							document.getElementById('container').innerHTML += '<div class="stumpTwo tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 09)
-						{
-							document.getElementById('container').innerHTML += '<div class="stumpThree tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 10)
-						{
-							document.getElementById('container').innerHTML += '<div class="stumpFour tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 11)
-						{
-							document.getElementById('container').innerHTML += '<div class="brush tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 12)
-						{
-							document.getElementById('container').innerHTML += '<div class="borderOne tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 13)
-						{
-							document.getElementById('container').innerHTML += '<div class="borderTwo tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 14)
-						{
-							document.getElementById('container').innerHTML += '<div class="borderThree tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 15)
-						{
-							document.getElementById('container').innerHTML += '<div class="borderFour tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 16)
-						{
-							document.getElementById('container').innerHTML += '<div class="sign tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 17)
-						{
-							document.getElementById('container').innerHTML += '<div class="pathOne tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 18)
-						{
-							document.getElementById('container').innerHTML += '<div class="pathTwo tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 19)
-						{
-							document.getElementById('container').innerHTML += '<div class="pathThree tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 20)
-						{
-							document.getElementById('container').innerHTML += '<div class="pathFour tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 21)
-						{
-							document.getElementById('container').innerHTML += '<div class="treeOne tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 22)
-						{
-							document.getElementById('container').innerHTML += '<div class="treeTwo tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 23)
-						{
-							document.getElementById('container').innerHTML += '<div class="treeThree tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 24)
-						{
-							document.getElementById('container').innerHTML += '<div class="treeFour tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 25)
-						{
-							document.getElementById('container').innerHTML += '<div class="treeFive tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 26)
-						{
-							document.getElementById('container').innerHTML += '<div class="treeSix tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 27)
-						{
-							document.getElementById('container').innerHTML += '<div class="pathFive tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 28)
-						{
-							document.getElementById('container').innerHTML += '<div class="pathSix tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 29)
-						{
-							document.getElementById('container').innerHTML += '<div class="pathSeven tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 30)
-						{
-							document.getElementById('container').innerHTML += '<div class="pathEight tile"></div>';
-						}
-						if(parseInt(mapArray[i][j]) == 31)
-						{
-							document.getElementById('container').innerHTML += '<div class="pathNine tile"></div>';
-						}
-					}
-				}
-		}
-		
-		
 		
 		
 		window.onload=function(){
-			//fieldMap();
-			drawMap();
+			fieldMap();
 		}
 		</script>
 	</body>
