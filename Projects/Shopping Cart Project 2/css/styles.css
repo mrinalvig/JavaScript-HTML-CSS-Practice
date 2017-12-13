@@ -1,23 +1,28 @@
 body {
-	background-color: black;
+	background-color: gray;
 	font-family: 'Quicksand';
 }
 
 .navbar {
-	background-color: gray;
+	background-color: darkgray;
+	border-bottom-color: transparent;
 }
 
 .navbar-brand {
 	color: black !important;
-	border-color: black;
-	border-width: 3px;
-	background-color: white;
+	//border-color: gray;
+	//border-width: 3px;
+	background-color: transparent;
+	font-size: 45px;
+	
 }
 
 .navbar-btn {
-	border-color: black;
-	border-width: 3px;
-	float: right;
+	//border-color: gray;
+	//border-width: 3px;
+	position: relative;
+	top: 05px;
+	right: 1350px;
 }
 
 .navbar-btn: hover {
@@ -46,9 +51,11 @@ body {
 }
 
 .navbar-cart {
-	border-color: black;
-	border-width: 2px;
-	float: left;
+	//border-color: gray;
+	//border-width: 3px;
+	position: relative;
+	top: 05px;
+	right: -300px;
 }
 
 .product-container {
