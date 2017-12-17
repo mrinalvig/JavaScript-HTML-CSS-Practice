@@ -21,15 +21,15 @@ function SignupModal() {
 	var modal = document.createElement("div");
 	var modalInner = "<div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>";
 	modalInner += "<div class='modal-dialog' role='document'>";
-	modalInner += "<div class='modal-content'><div class='modal-header' style='background-color:gray;'><h4 class='modal-title' id='myModalLabel'>Sign up</h4>";
-	modalInner += "</div><div class='modal-body' style='background-color: gray;'><div class='input-group input-group-lg'>";
+	modalInner += "<div class='modal-content'><div class='modal-header'><h4 class='modal-title' id='myModalLabel'>Sign up</h4>";
+	modalInner += "</div><div class='modal-body'><div class='input-group input-group-lg'>";
   	modalInner += "<input type='text' id='modalEmail' class='form-control' placeholder='Email' aria-describedby='sizing-addon1'>";
   	modalInner += "<span class='input-group-addon' id='sizing-addon1'><i class='fa fa-envelope' aria-hidden='true'></i></span>";
 	modalInner += "</div><div class='input-group input-group-lg' style='margin-top: 25px;'>";
   	modalInner += "<input type='password' id='modalPassword' class='form-control' placeholder='Password' aria-describedby='sizing-addon1'>";
   	modalInner += "<span class='input-group-addon' id='sizing-addon1'><i class='fa fa-lock' aria-hidden='true'></i></span>";
-	modalInner += "</div></div><div class='modal-footer' style='background-color: gray;'>";
-	modalInner += "<button type='button' class='btn btn-primary btn-lg' style='width: 100%; background-color: darkgray; border-color: black;' onClick='signup()'>Sign up</button>";
+	modalInner += "</div></div><div class='modal-footer'>";
+	modalInner += "<button type='button' class='btn btn-primary btn-lg' style='width: 100%; background-color: #A7E3E5; border-color: #A7E3E5;' onClick='signup()'>Sign up</button>";
 	modalInner += "</div></div></div></div>";
 	modal.innerHTML = modalInner;
 	return modal

@@ -10,12 +10,3 @@ function CartProductContainer(item, qty) {
 	product += "</div></div></div>";
 	return product
 }
-
-function emptyCartContainer(item, qty) {
-	var product = "<div class='cart-product-container'>";
-	product += "<div class='col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3'>";
-	product += "</div></div></div>";
-	return product
-	
-	
-}

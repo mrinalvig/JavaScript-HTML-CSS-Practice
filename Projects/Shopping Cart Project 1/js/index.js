@@ -26,7 +26,10 @@ function initWindow() {
 
 function addToCart(index) {
 	var user = localStorage.getItem('user');
-	
+	if (user === null) {
+		showModal();
+		return
+	}
 	// Get cart from localStorage
 	var cart = localStorage.getItem('cart');
 	// Check for empty cart
